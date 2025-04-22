@@ -229,6 +229,7 @@ export async function handleOAuth(
     {
       expectedNonce: await checks.nonce.use(cookies, resCookies, options),
       requireIdToken,
+      maxAge: o.skipAuthTimeCheck
     }
   )
 
